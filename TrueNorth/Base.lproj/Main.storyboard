@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xiI-sb-hpp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TrueNorth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mMy-cF-D8c" customClass="PreviewView" customModule="TrueNorth" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mMy-cF-D8c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AP7-vM-6xo"/>
+                            <constraint firstItem="mMy-cF-D8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TvE-9G-MfB"/>
+                            <constraint firstItem="mMy-cF-D8c" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hWz-MM-2Uy"/>
+                            <constraint firstItem="mMy-cF-D8c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pgR-RP-AN0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="previewView" destination="mMy-cF-D8c" id="2YY-pA-k75"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="Rb3-yk-xPS">
+            <objects>
+                <viewController id="xiI-sb-hpp" customClass="CameraViewController" customModule="TrueNorth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ocN-e0-p7g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iLt-HZ-91m">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byG-hj-7ix">
+                                <rect key="frame" x="19" y="611" width="337.5" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sE0-SP-jgp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iLt-HZ-91m" firstAttribute="width" secondItem="Sou-ob-eyE" secondAttribute="width" id="9mD-E9-ZP2"/>
+                            <constraint firstItem="Sou-ob-eyE" firstAttribute="bottom" secondItem="byG-hj-7ix" secondAttribute="bottom" constant="16" id="Hlm-sg-JcE"/>
+                            <constraint firstItem="byG-hj-7ix" firstAttribute="centerX" secondItem="iLt-HZ-91m" secondAttribute="centerX" id="M4T-x5-bJf"/>
+                            <constraint firstItem="byG-hj-7ix" firstAttribute="width" secondItem="Sou-ob-eyE" secondAttribute="width" multiplier="9:10" id="NPd-n2-bsS"/>
+                            <constraint firstItem="iLt-HZ-91m" firstAttribute="centerX" secondItem="Sou-ob-eyE" secondAttribute="centerX" id="ayS-u7-ITT"/>
+                            <constraint firstItem="iLt-HZ-91m" firstAttribute="centerY" secondItem="Sou-ob-eyE" secondAttribute="centerY" id="ha0-X2-GIE"/>
+                            <constraint firstItem="iLt-HZ-91m" firstAttribute="height" secondItem="Sou-ob-eyE" secondAttribute="height" id="iw5-pS-mvH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sou-ob-eyE"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="iLt-HZ-91m" id="Odo-IG-7AH"/>
+                        <outlet property="statusLabel" destination="byG-hj-7ix" id="JRQ-QZ-10x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y2j-oL-bUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088.8" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
