@@ -16,6 +16,12 @@ class PreviewView: UIView {
             fatalError()
         }
         
+        let bounds = self.bounds
+        
+        layer.bounds = bounds
+        layer.videoGravity = .resizeAspectFill
+        layer.position = CGPoint(x: bounds.midX, y: bounds.midY)
+        
         return layer
     }
     

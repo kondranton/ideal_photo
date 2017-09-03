@@ -18,17 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mMy-cF-D8c" customClass="PreviewView" customModule="TrueNorth" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mMy-cF-D8c" customClass="PreviewView" customModule="TrueNorth" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mMy-cF-D8c" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AP7-vM-6xo"/>
-                            <constraint firstItem="mMy-cF-D8c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TvE-9G-MfB"/>
-                            <constraint firstItem="mMy-cF-D8c" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hWz-MM-2Uy"/>
-                            <constraint firstItem="mMy-cF-D8c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pgR-RP-AN0"/>
+                            <constraint firstItem="mMy-cF-D8c" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="8zQ-6p-MAk"/>
+                            <constraint firstItem="mMy-cF-D8c" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FCy-XX-4hV"/>
+                            <constraint firstItem="mMy-cF-D8c" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Gc6-rr-2HS"/>
+                            <constraint firstItem="mMy-cF-D8c" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="mVw-bd-WFS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
