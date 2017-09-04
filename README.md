@@ -8,7 +8,7 @@
 
 1) Clone project
 2) In project directory run `pod install`
-3) Build and remove 3 preprocessor derictives that cause errors in Affectiva framework.
+3) Build and remove 3 lines that cause errors in Affectiva framework.
 4) For `demo` verion just run
 5) For `research` verion switch inital controller in `Main.storyboard` and run
 
@@ -16,7 +16,8 @@
 
 Помимо разработки так же было проведено исследование на тему того, какие нативные фреймворки могут помочь в решении задачи.
 Рассматривались `CoreImage`, `AVFoundation` и новый фреймворк `Vision`. Ни один из них не содержит информацию об угле наклона "pitch".
-AVFoundation определяет другие углы но с довольно большой погрешностью. 
+AVFoundation определяет другие углы но с довольно большой погрешностью. Когда на интервью был разговор про `Vision` видимо подразумевалось
+извлечение `landmarks` с его помощью? 
 
 В итоге использовалась `Affectiva`.
 Из-за завершения работ над другими проектами я не успел собрать версию `research` и версию `demo` (Affectiva 
@@ -36,3 +37,5 @@ AVFoundation определяет другие углы но с довольно
     4. Если была осуществлена смена мест, то добавляем к хранимой переменной 1.
     
 # Решение алгоритмической задачи 2.
+
+Поиск в глубину с запоминанием состояний для избежания зацикливания.
